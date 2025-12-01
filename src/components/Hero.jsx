@@ -3,7 +3,7 @@ import Heroimg from "../assets/Heroimg.jpeg"; // TEMP: using your logo as placeh
 
 export default function HeroSection() {
   return (
-    <section  className="bg-[#ffffff] text-white py-20 px-6">
+    <section  className="bg-[#ffffff] text-white py-20 px-6 pt-32">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
         {/* LEFT CONTENT */}
         <div>

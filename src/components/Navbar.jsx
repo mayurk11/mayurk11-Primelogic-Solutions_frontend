@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <nav className="fixed w-full bg-white shadow-sm border-b border-[#26217A] z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
-        
+
         {/* Logo */}
         <div className="flex items-center">
           <img src={Logo} alt="logo" className="h-14 w-14" />
@@ -34,25 +34,26 @@ export default function Navbar() {
         {/* Menu Items */}
         <ul
           className={`md:flex md:items-center gap-10 text-lg font-medium text-[#0c0c14]
-          absolute md:static left-0 w-full md:w-auto bg-white md:bg-transparent
-          transition-all duration-300 ease-in-out 
-          ${isOpen ? "top-20 opacity-100" : "top-[-300px] opacity-0 md:opacity-100"}`}
+          md:static absolute left-0 top-full w-full md:w-auto bg-white md:bg-transparent
+          transition-all duration-300 ease-in-out overflow-hidden
+          ${isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0 md:opacity-100"}`}
         >
-          {["home", "about", "services", "contact"].map((section, index) => (
-            <li key={index} className="text-center py-3 md:py-0">
+          {["home", "about", "services", "contact"].map((section, i) => (
+            <li key={i} className="text-center py-3 md:py-0">
               <Link
                 to={section}
                 smooth={true}
-                offset={-80}
+                offset={-90}
                 duration={500}
                 className="cursor-pointer hover:text-blue-500"
-                onClick={() => setIsOpen(false)} // close menu on click
+                onClick={() => setIsOpen(false)}
               >
                 {section.charAt(0).toUpperCase() + section.slice(1)}
               </Link>
             </li>
           ))}
         </ul>
+
       </div>
     </nav>
   );
