@@ -80,7 +80,7 @@ const handleSubmit = async (e) => {
 
             <p className="flex items-center gap-3">
               <FaLinkedin className="text-[#26217A]" />
-              <a href="">https://www.linkedin.com/company/primelogicinfo/</a>
+              <a href="https://www.linkedin.com/company/primelogicinfo/">Linkedin</a>
             </p>
 
             <p className="flex items-center gap-3">🏢 Virtual Office / Remote</p>
